@@ -1,4 +1,4 @@
-﻿IMPORT $,Std;
+﻿IMPORT $,STD;
 
 EXPORT STD_Crimes := MODULE
 
