@@ -19,10 +19,7 @@ EXPORT TarefaLab11 (STRING Block_info):= FUNCTION
 		SELF:=Ri;
     END;
 	
-	JoinRecs:= JOIN(basekey1,FilteredKey,
-									KEYED(LEFT.block_id=RIGHT.block_id) AND WILD(RIGHT.Block), 
-									MyJoin(LEFT, RIGHT),
-									ALL);
+	JoinRecs:= JOIN(basekey1,FilteredKey, KEYED(LEFT.block_id=RIGHT.block_id) AND WILD(RIGHT.Block), MyJoin(LEFT, RIGHT), ALL);
 
 	outrec := RECORD
 		joinrecs.block;
